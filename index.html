@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sazzad Ahmad | Full-Stack Software Engineer & Systems Developer</title>
   <meta name="description" content="Portfolio of Sazzad Ahmad - CSE Undergraduate, Full-Stack Engineer, and Distributed Systems Builder." />
+  <meta name="theme-color" content="#090d16" />
+  <meta property="og:title" content="Sazzad Ahmad | Full-Stack Software Engineer" />
+  <meta property="og:description" content="Full-stack engineer building resilient web applications and distributed systems." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sazzad-ahmad.github.io/" />
+  <meta name="twitter:card" content="summary" />
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -44,6 +50,24 @@
       font-family: 'Inter', sans-serif;
       background-color: #090d16;
     }
+    :focus-visible {
+      outline: 2px solid #60a5fa;
+      outline-offset: 4px;
+    }
+    .skip-link {
+      position: fixed;
+      left: 1.5rem;
+      top: -4rem;
+      z-index: 100;
+      border-radius: 0.5rem;
+      background: #2563eb;
+      padding: 0.75rem 1rem;
+      color: white;
+      transition: top 150ms ease;
+    }
+    .skip-link:focus {
+      top: 1rem;
+    }
     .glow-border:hover {
       box-shadow: 0 0 25px rgba(59, 130, 246, 0.15);
       border-color: rgba(59, 130, 246, 0.4);
@@ -56,9 +80,20 @@
       font-size: 0.75rem;
       font-weight: 600;
     }
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
   </style>
 </head>
-<body class="bg-darkBg text-slate-200 antialiased selection:bg-brand-500 selection:text-white">
+<body id="top" class="bg-darkBg text-slate-200 antialiased selection:bg-brand-500 selection:text-white">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- Ambient Background Glow -->
   <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
@@ -68,8 +103,8 @@
 
   <!-- Header / Navigation -->
   <header class="sticky top-0 z-50 backdrop-blur-md bg-darkBg/80 border-b border-cardBorder">
-    <nav class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
-      <a href="#" class="font-extrabold text-xl tracking-tight text-white flex items-center gap-2 group">
+    <nav class="relative max-w-6xl mx-auto px-6 h-20 flex justify-between items-center" aria-label="Primary navigation">
+      <a href="#top" class="font-extrabold text-xl tracking-tight text-white flex items-center gap-2 group" aria-label="Sazzad Ahmad, back to top">
         <span class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white text-sm shadow-lg shadow-brand-500/30 group-hover:scale-105 transition">SA</span>
         <span>Sazzad<span class="text-brand-400">.dev</span></span>
       </a>
@@ -87,14 +122,27 @@
       <div class="flex items-center gap-3">
         <a href="https://github.com/sazzad-ahmad" target="_blank" rel="noopener noreferrer" 
            class="flex items-center gap-2 text-xs sm:text-sm font-semibold px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 hover:border-slate-500 transition">
-          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
           <span>GitHub</span>
         </a>
+        <button id="menuBtn" type="button" class="md:hidden w-10 h-10 rounded-lg bg-slate-800 border border-slate-700 text-white flex items-center justify-center" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open navigation menu">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+
+      <div id="mobileMenu" class="hidden absolute left-6 right-6 top-[4.5rem] rounded-xl border border-cardBorder bg-cardBg p-4 shadow-2xl md:hidden">
+        <div class="flex flex-col space-y-1 text-sm font-medium text-slate-300">
+          <a href="#about" class="rounded-lg px-3 py-2 hover:bg-slate-800 hover:text-brand-400">About</a>
+          <a href="#skills" class="rounded-lg px-3 py-2 hover:bg-slate-800 hover:text-brand-400">Tech Stack</a>
+          <a href="#projects" class="rounded-lg px-3 py-2 hover:bg-slate-800 hover:text-brand-400">Projects</a>
+          <a href="#achievements" class="rounded-lg px-3 py-2 hover:bg-slate-800 hover:text-brand-400">Achievements</a>
+          <a href="#contact" class="rounded-lg px-3 py-2 hover:bg-slate-800 hover:text-brand-400">Contact</a>
+        </div>
       </div>
     </nav>
   </header>
 
-  <main class="max-w-6xl mx-auto px-6 py-12 md:py-20 space-y-24">
+  <main id="main-content" class="max-w-6xl mx-auto px-6 py-12 md:py-20 space-y-24">
 
     <!-- Hero Section -->
     <section id="about" class="flex flex-col md:flex-row items-center justify-between gap-12 pt-4">
@@ -136,7 +184,7 @@
         <div class="relative w-72 sm:w-80 p-6 rounded-2xl bg-cardBg border border-cardBorder shadow-2xl glow-border transition group">
           <div class="flex items-center gap-4 mb-5">
             <div class="w-16 h-16 rounded-full ring-2 ring-brand-500/50 p-1 overflow-hidden bg-slate-800">
-              <img src="https://avatars.githubusercontent.com/u/150162590?v=4" alt="Sazzad Ahmad" class="w-full h-full object-cover rounded-full" onerror="this.src='https://placehold.co/150x150/1e293b/ffffff?text=SA'" />
+              <img src="https://avatars.githubusercontent.com/u/150162590?v=4" alt="Sazzad Ahmad" width="64" height="64" loading="eager" class="w-full h-full object-cover rounded-full" onerror="this.remove()" />
             </div>
             <div>
               <h3 class="text-white font-bold text-lg">Sazzad Ahmad</h3>
@@ -424,7 +472,7 @@
           <span>LinkedIn Profile</span>
         </a>
 
-        <button onclick="copyEmail()" id="copyBtn" class="bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 font-semibold px-6 py-3 rounded-lg transition flex items-center gap-2">
+        <button id="copyBtn" type="button" class="bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 font-semibold px-6 py-3 rounded-lg transition flex items-center gap-2">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
           <span id="copyText">Copy Address</span>
         </button>
@@ -437,28 +485,57 @@
   <footer class="border-t border-cardBorder max-w-6xl mx-auto px-6 py-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
     <p>© 2026 Sazzad Ahmad. Built with Tailwind CSS & Hosted via GitHub Pages.</p>
     <div class="flex items-center space-x-6">
-      <a href="https://github.com/sazzad-ahmad" target="_blank" class="hover:text-slate-300 transition">GitHub</a>
-      <a href="https://www.linkedin.com/in/sazzad-ahmad-5026b527b" target="_blank" class="hover:text-slate-300 transition">LinkedIn</a>
+      <a href="https://github.com/sazzad-ahmad" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300 transition">GitHub</a>
+      <a href="https://www.linkedin.com/in/sazzad-ahmad-5026b527b" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300 transition">LinkedIn</a>
       <a href="mailto:sazzadahmadshuvo@gmail.com" class="hover:text-slate-300 transition">Email</a>
     </div>
   </footer>
 
   <script>
-    function copyEmail() {
-      const email = "sazzadahmadshuvo@gmail.com";
-      const dummy = document.createElement("input");
-      document.body.appendChild(dummy);
-      dummy.value = email;
-      dummy.select();
-      document.execCommand("copy");
-      document.body.removeChild(dummy);
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
 
+    function closeMenu() {
+      mobileMenu.classList.add("hidden");
+      menuBtn.setAttribute("aria-expanded", "false");
+      menuBtn.setAttribute("aria-label", "Open navigation menu");
+    }
+
+    menuBtn.addEventListener("click", () => {
+      const isOpen = menuBtn.getAttribute("aria-expanded") === "true";
+      mobileMenu.classList.toggle("hidden", isOpen);
+      menuBtn.setAttribute("aria-expanded", String(!isOpen));
+      menuBtn.setAttribute("aria-label", isOpen ? "Open navigation menu" : "Close navigation menu");
+    });
+
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    document.getElementById("copyBtn").addEventListener("click", async () => {
+      const email = "sazzadahmadshuvo@gmail.com";
       const copyText = document.getElementById("copyText");
-      copyText.innerText = "Copied to Clipboard!";
+
+      try {
+        await navigator.clipboard.writeText(email);
+        copyText.innerText = "Copied to Clipboard!";
+      } catch {
+        const dummy = document.createElement("textarea");
+        dummy.value = email;
+        dummy.setAttribute("readonly", "");
+        dummy.style.position = "fixed";
+        dummy.style.opacity = "0";
+        document.body.appendChild(dummy);
+        dummy.select();
+        document.execCommand("copy");
+        document.body.removeChild(dummy);
+        copyText.innerText = "Copied to Clipboard!";
+      }
+
       setTimeout(() => {
         copyText.innerText = "Copy Address";
       }, 2000);
-    }
+    });
   </script>
 </body>
 </html>
