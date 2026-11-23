@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sazzad Ahmad | Full-Stack Software Engineer & Systems Developer</title>
-  <meta name="description" content="Portfolio of Sazzad Ahmad - CSE Undergraduate, Full-Stack Engineer, and Distributed Systems Builder." />
+  <meta name="description" content="Sazzad Ahmad is a full-stack developer and CSE undergraduate building practical web products, backend systems, and security tools." />
   <meta name="theme-color" content="#090d16" />
   <meta property="og:title" content="Sazzad Ahmad | Full-Stack Software Engineer" />
-  <meta property="og:description" content="Full-stack engineer building resilient web applications and distributed systems." />
+  <meta property="og:description" content="Full-stack developer building practical web products, backend systems, and security tools." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://sazzad-ahmad.github.io/" />
   <meta name="twitter:card" content="summary" />
@@ -80,6 +80,12 @@
       font-size: 0.75rem;
       font-weight: 600;
     }
+    .hero-grid {
+      background-image: linear-gradient(rgba(96, 165, 250, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(96, 165, 250, 0.06) 1px, transparent 1px);
+      background-size: 32px 32px;
+      mask-image: linear-gradient(to bottom, black, transparent 82%);
+    }
     @media (prefers-reduced-motion: reduce) {
       html {
         scroll-behavior: auto;
@@ -97,6 +103,7 @@
 
   <!-- Ambient Background Glow -->
   <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+    <div class="hero-grid absolute inset-0"></div>
     <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-brand-500/10 blur-[140px] rounded-full"></div>
     <div class="absolute top-[45%] -right-40 w-[500px] h-[350px] bg-indigo-500/10 blur-[130px] rounded-full"></div>
   </div>
@@ -149,7 +156,7 @@
       <div class="space-y-6 md:w-3/5">
         <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold">
           <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          Available for Software Engineering & Full-Stack Projects
+          Open to internships, collaborations & software projects
         </div>
 
         <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
@@ -157,11 +164,11 @@
         </h1>
         
         <p class="text-xl font-medium text-slate-300">
-          Full-Stack Software Engineer & Distributed Systems Enthusiast
+          Full-Stack Developer · Systems Builder · CSE Undergraduate
         </p>
 
         <p class="text-slate-400 text-base leading-relaxed">
-          Undergraduate in Computer Science & Engineering. Passionate about building resilient distributed web architectures, high-performance backend microservices with containerization, and normalized relational database systems.
+          I build useful, reliable products from idea to deployment—responsive interfaces, REST APIs, relational data models, and cloud-ready services. I am currently studying Computer Science & Engineering and exploring distributed systems and cybersecurity.
         </p>
 
         <div class="flex flex-wrap items-center gap-4 pt-2">
@@ -184,7 +191,7 @@
         <div class="relative w-72 sm:w-80 p-6 rounded-2xl bg-cardBg border border-cardBorder shadow-2xl glow-border transition group">
           <div class="flex items-center gap-4 mb-5">
             <div class="w-16 h-16 rounded-full ring-2 ring-brand-500/50 p-1 overflow-hidden bg-slate-800">
-              <img src="https://avatars.githubusercontent.com/u/150162590?v=4" alt="Sazzad Ahmad" width="64" height="64" loading="eager" class="w-full h-full object-cover rounded-full" onerror="this.remove()" />
+              <img src="https://avatars.githubusercontent.com/u/199401594?v=4" alt="Sazzad Ahmad" width="64" height="64" loading="eager" class="w-full h-full object-cover rounded-full" onerror="this.remove()" />
             </div>
             <div>
               <h3 class="text-white font-bold text-lg">Sazzad Ahmad</h3>
@@ -200,11 +207,11 @@
             </div>
             <div class="flex justify-between items-center">
               <span class="text-slate-400">Database Engine</span>
-              <span class="font-medium text-brand-400">TiDB Serverless NewSQL</span>
+              <span class="font-medium text-brand-400">MySQL & TiDB</span>
             </div>
             <div class="flex justify-between items-center">
               <span class="text-slate-400">Primary Stack</span>
-              <span class="font-medium text-white">React • TypeScript • PHP 8.2</span>
+              <span class="font-medium text-white">React • Node.js • PHP</span>
             </div>
             <div class="flex justify-between items-center">
               <span class="text-slate-400">Cloud Hostings</span>
@@ -219,7 +226,7 @@
     <section id="skills" class="space-y-8">
       <div>
         <h2 class="text-3xl font-bold text-white tracking-tight">Technical Stack & Engineering Toolkit</h2>
-        <p class="text-slate-400 text-sm mt-2">Tools, languages, and distributed cloud services I leverage to architect end-to-end applications.</p>
+        <p class="text-slate-400 text-sm mt-2">A practical toolkit for shipping maintainable products from frontend to production.</p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -244,10 +251,12 @@
           <div>
             <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold mb-4">BE</div>
             <h3 class="font-semibold text-white text-base mb-2">Backend & Microservices</h3>
-            <p class="text-slate-400 text-xs mb-4">Robust REST APIs, PDO abstraction, and structured logic.</p>
+            <p class="text-slate-400 text-xs mb-4">Reliable APIs, service layers, and structured application logic.</p>
           </div>
           <div class="flex flex-wrap gap-2">
             <span class="badge-pill bg-slate-800 text-slate-200 border border-slate-700">PHP 8.2</span>
+            <span class="badge-pill bg-slate-800 text-slate-200 border border-slate-700">Node.js</span>
+            <span class="badge-pill bg-slate-800 text-slate-200 border border-slate-700">Express</span>
             <span class="badge-pill bg-slate-800 text-slate-200 border border-slate-700">RESTful APIs</span>
             <span class="badge-pill bg-slate-800 text-slate-200 border border-slate-700">C</span>
             <span class="badge-pill bg-slate-800 text-slate-200 border border-slate-700">C++</span>
@@ -293,7 +302,7 @@
     <section id="projects" class="space-y-8">
       <div>
         <h2 class="text-3xl font-bold text-white tracking-tight">Featured Engineering Projects</h2>
-        <p class="text-slate-400 text-sm mt-2">Production web suites, algorithmic repositories, and cyber solutions.</p>
+        <p class="text-slate-400 text-sm mt-2">Selected work across full-stack applications, backend systems, and security.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -383,6 +392,44 @@
           </div>
         </div>
 
+        <!-- CARD 4: Student Collab Hub -->
+        <div class="bg-cardBg border border-cardBorder rounded-xl p-6 glow-border transition flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="badge-pill bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Full-Stack Platform</span>
+              <a href="https://github.com/sazzad-ahmad/student-collab-hub" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white text-xs font-semibold">&rarr; Repo</a>
+            </div>
+            <h3 class="text-xl font-bold text-white">Student Collab Hub</h3>
+            <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+              A project management and collaboration platform that helps students organize work, share progress, and coordinate team projects.
+            </p>
+          </div>
+          <div class="mt-6 flex flex-wrap gap-2 text-xs">
+            <span class="badge-pill bg-slate-800 text-slate-300">Node.js</span>
+            <span class="badge-pill bg-slate-800 text-slate-300">Express</span>
+            <span class="badge-pill bg-slate-800 text-slate-300">MySQL</span>
+          </div>
+        </div>
+
+        <!-- CARD 5: CyberSecurity Projects -->
+        <div class="bg-cardBg border border-cardBorder rounded-xl p-6 glow-border transition flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="badge-pill bg-rose-500/10 text-rose-400 border border-rose-500/20">Cybersecurity</span>
+              <a href="https://github.com/sazzad-ahmad/CyberSecurity-Projects" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white text-xs font-semibold">&rarr; Repo</a>
+            </div>
+            <h3 class="text-xl font-bold text-white">Cybersecurity Projects</h3>
+            <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+              A collection of practical security mini-projects and Python scripts exploring defensive concepts, automation, and network awareness.
+            </p>
+          </div>
+          <div class="mt-6 flex flex-wrap gap-2 text-xs">
+            <span class="badge-pill bg-slate-800 text-slate-300">Python</span>
+            <span class="badge-pill bg-slate-800 text-slate-300">Security</span>
+            <span class="badge-pill bg-slate-800 text-slate-300">Automation</span>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -458,7 +505,7 @@
     <section id="contact" class="bg-cardBg border border-cardBorder rounded-2xl p-8 sm:p-12 text-center space-y-6">
       <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Let's Connect & Collaborate</h2>
       <p class="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
-        Whether you have an interesting software project, internship opportunity, or want to discuss distributed architectures—feel free to drop an email or connect on LinkedIn!
+        Interested in working together, discussing a project, or sharing ideas about software engineering? I would love to hear from you.
       </p>
 
       <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
@@ -483,7 +530,7 @@
 
   <!-- Clean Minimalist Footer -->
   <footer class="border-t border-cardBorder max-w-6xl mx-auto px-6 py-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-    <p>© 2026 Sazzad Ahmad. Built with Tailwind CSS & Hosted via GitHub Pages.</p>
+    <p>© <span id="currentYear">2026</span> Sazzad Ahmad. Built with Tailwind CSS & hosted via GitHub Pages.</p>
     <div class="flex items-center space-x-6">
       <a href="https://github.com/sazzad-ahmad" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300 transition">GitHub</a>
       <a href="https://www.linkedin.com/in/sazzad-ahmad-5026b527b" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300 transition">LinkedIn</a>
@@ -536,6 +583,8 @@
         copyText.innerText = "Copy Address";
       }, 2000);
     });
+
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
